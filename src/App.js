@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       {/* <Pokemon pokemonId={25} /> */}
       <Pokemon pokemonId={Math.floor(Math.random() * 1000)} />
-      <img style={{ height: "320px" }} src={VS} alt="vs" />
+      <img style={{ height: "200px" }} src={VS} alt="vs" />
       <Pokemon pokemonId={Math.floor(Math.random() * 1000)} />
     </div>
   );
