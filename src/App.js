@@ -1,5 +1,5 @@
 import Pokemon from "./components/Pokemon";
-import VS from "./assets/images/vs.png"
+import VS from "./assets/images/vs.png";
 
 function App() {
   return (

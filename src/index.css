@@ -23,7 +23,7 @@
 }
 
 .pokemon-card img {
-  width: 128px;
+  width: 100%px;
   height: 128px;
   object-fit: contain;
 }
