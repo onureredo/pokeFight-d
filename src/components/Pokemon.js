@@ -10,8 +10,8 @@ function Pokemon({ pokemonId }) {
             .then(response => {
                 console.log(response.data);
 
-            })
-    })
+            });
+    }, [pokemonId]);
 
 
     return (
