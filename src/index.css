@@ -82,3 +82,20 @@ body {
   text-align: right;
   padding: 10px 20px;
 }
+
+button {
+  background-color: #252525;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  font-family: monospace;
+  box-shadow: 1px 2px 2px 0px rgb(77, 77, 77);
+}
+
+button:active {
+  box-shadow: inset 1px 2px 2px 0px rgb(77, 77, 77);
+}

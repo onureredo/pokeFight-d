@@ -2,8 +2,9 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import not_found from "../assets/images/not_found.png";
 
-function Pokemon({ pokemonId }) {
+function Pokemon() {
   const [pokemon, setPokemon] = useState([]);
+  const [pokemonId, setPokemonId] = useState(Math.floor(Math.random() * 1000));
 
   useEffect(() => {
     axios
@@ -13,6 +14,11 @@ function Pokemon({ pokemonId }) {
         setPokemon(response.data);
       });
   }, [pokemonId]);
+
+  const handleRandomPokemon = () => {
+    const randomId = Math.floor(Math.random() * 1000);
+    setPokemonId(randomId);
+  };
 
   return (
     <div className="pokemon-card">
@@ -30,6 +36,11 @@ function Pokemon({ pokemonId }) {
             <img src={not_found} alt="not_found" />
           )}
           <div className="hp-bar">
+            <div className="pokeball">
+              <div class="pokeball-button">
+                <button onClick={handleRandomPokemon}>RANDOM</button>
+              </div>
+            </div>
             <div
               className="fill"
               style={{ width: `${pokemon.stats[0].base_stat}` }}
