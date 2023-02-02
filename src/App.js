@@ -3,7 +3,7 @@ import Pokemon from "./components/Pokemon";
 function App() {
   return (
     <div className="App">
-      <Pokemon pokemonId={1} />
+      <Pokemon pokemonId={Math.floor(Math.random() * 1000)} />
 
     </div>
   );

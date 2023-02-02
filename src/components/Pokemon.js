@@ -16,13 +16,13 @@ function Pokemon({ pokemonId }) {
     return (
         <div className='pokemon-card'>
             <h1>{pokemon.name}</h1>
-            <img src={pokemon.sprites.other.dream_world.front_default} alt={pokemon.name} />
-            <p>HP: {pokemon.stats[0].base_stat}</p>
-            <p>Attack: {pokemon.stats[1].base_stat}</p>
-            <p>Defense: {pokemon.stats[2].base_stat}</p>
-            <p>Speed: {pokemon.stats[5].base_stat}</p>
+            <img src={pokemon.sprites?.other?.dream_world.front_default} alt={pokemon.name} />
+            <p>HP: {pokemon.stats?.[0].base_stat}</p>
+            <p>Attack: {pokemon.stats?.[1].base_stat}</p>
+            <p>Defense: {pokemon.stats?.[2].base_stat}</p>
+            <p>Speed: {pokemon.stats?.[5].base_stat}</p>
             <p>XP: {pokemon.base_experience}</p>
-
+            <p>ID: {pokemon.id}</p>
         </div>
     )
 }
