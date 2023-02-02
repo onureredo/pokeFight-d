@@ -4,7 +4,7 @@ import not_found from "../assets/images/not_found.png";
 
 function Pokemon() {
   const [pokemon, setPokemon] = useState([]);
-  const [pokemonId, setPokemonId] = useState(Math.floor(Math.random() * 1000));
+  const [pokemonId, setPokemonId] = useState(Math.floor(Math.random() * 100));
 
   useEffect(() => {
     axios
@@ -16,7 +16,7 @@ function Pokemon() {
   }, [pokemonId]);
 
   const handleRandomPokemon = () => {
-    const randomId = Math.floor(Math.random() * 1000);
+    const randomId = Math.floor(Math.random() * 100);
     setPokemonId(randomId);
   };
 

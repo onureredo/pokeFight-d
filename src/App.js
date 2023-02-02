@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       {/* <Pokemon pokemonId={25} /> */}
       <Pokemon />
-      <img style={{ height: "260px" }} src={VS} alt="vs" />
+      <img id="vs" src={VS} alt="vs" />
       <Pokemon />
     </div>
   );
