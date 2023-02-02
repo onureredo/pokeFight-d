@@ -1,3 +1,14 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App h2 {
+  font-family: monospace;
+  font-size: 128px;
+}
+
 .pokemon-card {
   display: flex;
   flex-direction: column;
