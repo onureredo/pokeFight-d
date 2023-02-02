@@ -18,7 +18,9 @@ function Pokemon({ pokemonId }) {
     <div className="pokemon-card">
       {pokemon.name ? (
         <>
-          <h1>{pokemon.name.toUpperCase()}</h1>
+          <div className="pokemon-header">
+            <h1>{pokemon.name.toUpperCase()}</h1>
+          </div>
           {pokemon.sprites.other.dream_world.front_default ? (
             <img
               src={pokemon.sprites?.other?.dream_world.front_default}
@@ -27,11 +29,24 @@ function Pokemon({ pokemonId }) {
           ) : (
             <img src={not_found} alt="not_found" />
           )}
-          <p>HP: {pokemon.stats[0].base_stat}</p>
-          <p>Attack: {pokemon.stats[1].base_stat}</p>
-          <p>Defense: {pokemon.stats[2].base_stat}</p>
-          <p>Speed: {pokemon.stats[5].base_stat}</p>
-          <p>XP: {pokemon.base_experience}</p>
+          <div className="hp-bar">
+            <div
+              className="fill"
+              style={{ width: `${pokemon.stats[0].base_stat}` }}
+            >
+              <p>HP: {pokemon.stats[0].base_stat}</p>
+            </div>
+          </div>
+          <div className="pokemon-details">
+            <div className="left">
+              <p>Attack: {pokemon.stats[1].base_stat}</p>
+              <p>XP: {pokemon.base_experience}</p>
+            </div>
+            <div className="right">
+              <p>Defense: {pokemon.stats[2].base_stat}</p>
+              <p>Speed: {pokemon.stats[5].base_stat}</p>
+            </div>
+          </div>
         </>
       ) : (
         <p>loading...</p>
