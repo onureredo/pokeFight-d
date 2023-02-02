@@ -47,10 +47,6 @@ body {
 
 .hp-bar {
   width: 200px;
-  border-radius: 10px;
-  margin-top: 10px;
-  position: relative;
-  padding: 30px 0 0 0;
   text-align: center;
   color: #fff;
   font-weight: 600;
@@ -59,7 +55,6 @@ body {
 .hp-bar .fill {
   background-color: #4caf50;
   border-radius: 10px;
-  transition: width 0.3s ease-in-out;
 }
 
 .pokemon-details {
@@ -83,18 +78,99 @@ body {
   padding: 10px 20px;
 }
 
-button {
-  background-color: #252525;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-weight: 600;
-  cursor: pointer;
-  text-align: center;
-  font-family: monospace;
+/* POKEBALL */
+.pokeball {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  border: solid 5px black;
+  border-radius: 50%;
+  padding: 10px;
+  margin-top: 2em;
+  animation: fall 0.25s ease-in-out,
+    shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) 3;
 }
 
-button:active {
-  box-shadow: inset 1px 2px 2px 0px rgb(77, 77, 77);
+.pokeball:hover {
+  animation: shake 0.5s;
+}
+.pokeball {
+  box-shadow: inset 1em 0.25em #26262650;
+  background: linear-gradient(360deg, white 50%, red 50%);
+}
+
+.inner-circle,
+.pokeball-button,
+.border-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.border-circle {
+  width: 67.5px;
+  height: 67.5px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 2;
+}
+
+.inner-circle {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: #eee;
+  z-index: 2;
+}
+
+.pokeball-button {
+  width: 27.5px;
+  height: 27.5px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: #eee;
+  box-shadow: 1px 0.5px 1px black;
+  z-index: 2;
+}
+
+button {
+  height: 27.5px;
+  width: 27.5px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.pokeball-button {
+  animation: blink 0.5s alternate 7;
+}
+
+.pokeball-button:active {
+  box-shadow: 0.5px 0.5px 1px black;
+}
+
+.bright1,
+.bright2 {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ffffff;
+  z-index: 4;
+}
+.bright1 {
+  top: 10%;
+  right: 20%;
+  width: 20px;
+  height: 27.5px;
+  transform: rotate(25deg);
+}
+
+.bright2 {
+  top: 25.5%;
+  right: 8%;
+  width: 15px;
+  height: 15px;
 }

@@ -35,12 +35,19 @@ function Pokemon() {
           ) : (
             <img src={not_found} alt="not_found" />
           )}
-          <div className="hp-bar">
-            <div className="pokeball">
-              <div class="pokeball-button">
-                <button onClick={handleRandomPokemon}>RANDOM</button>
+          <div class="pokeball">
+            <div class="border-circle">
+              <div class="inner-circle">
+                <div class="pokeball-button">
+                  <button onClick={handleRandomPokemon}></button>
+                </div>
               </div>
             </div>
+            <div class="border-bar"></div>
+            <div class="bright1"></div>
+            <div class="bright2"></div>
+          </div>
+          <div className="hp-bar">
             <div
               className="fill"
               style={{ width: `${pokemon.stats[0].base_stat}` }}
@@ -48,6 +55,7 @@ function Pokemon() {
               <p>HP: {pokemon.stats[0].base_stat}</p>
             </div>
           </div>
+
           <div className="pokemon-details">
             <div className="left">
               <p>Attack: {pokemon.stats[1].base_stat}</p>
