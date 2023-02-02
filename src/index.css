@@ -174,3 +174,41 @@ button {
   width: 15px;
   height: 15px;
 }
+@keyframes shake {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  15% {
+    transform: translateX(-10px) rotate(-10deg);
+  }
+  40% {
+    transform: translateX(-15px) rotate(-15deg);
+  }
+  60% {
+    transform: translateX(15px) rotate(15deg);
+  }
+}
+
+@keyframes blink {
+  from {
+    background: #eee;
+  }
+  to {
+    background: #e74c3c;
+  }
+}
+
+@keyframes fall {
+  0% {
+    top: -200px;
+  }
+  60% {
+    top: 0;
+  }
+  80% {
+    top: -20px;
+  }
+  100% {
+    top: 0;
+  }
+}
