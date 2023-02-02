@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import not_found from "../assets/images/not_found.png";
+import { RotatingLines } from "react-loader-spinner";
 
 function Pokemon() {
   const [pokemon, setPokemon] = useState([]);
@@ -16,7 +17,7 @@ function Pokemon() {
   }, [pokemonId]);
 
   const handleRandomPokemon = () => {
-    const randomId = Math.floor(Math.random() * 100);
+    const randomId = Math.floor(Math.random() * 1000);
     setPokemonId(randomId);
   };
 
@@ -27,6 +28,7 @@ function Pokemon() {
           <div className="pokemon-header">
             <h1>{pokemon.name.toUpperCase()}</h1>
           </div>
+
           {pokemon.sprites.other.dream_world.front_default ? (
             <img
               src={pokemon.sprites?.other?.dream_world.front_default}
@@ -55,7 +57,6 @@ function Pokemon() {
               <p>HP: {pokemon.stats[0].base_stat}</p>
             </div>
           </div>
-
           <div className="pokemon-details">
             <div className="left">
               <p>Attack: {pokemon.stats[1].base_stat}</p>
@@ -68,7 +69,13 @@ function Pokemon() {
           </div>
         </>
       ) : (
-        <p>loading...</p>
+        <RotatingLines
+          strokeColor="grey"
+          strokeWidth="5"
+          animationDuration="0.75"
+          width="32"
+          visible={true}
+        />
       )}
     </div>
   );
