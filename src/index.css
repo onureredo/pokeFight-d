@@ -4,7 +4,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  max-height: 200vh;
+  max-height: 200;
 }
 
 body::-webkit-scrollbar {
@@ -16,6 +16,13 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.poke-fight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .App h2 {
@@ -159,6 +166,10 @@ body::-webkit-scrollbar {
   cursor: pointer;
   border: none;
   background-color: transparent;
+}
+
+#btn-fight {
+  padding: 2em;
 }
 
 .pokeball-button {
