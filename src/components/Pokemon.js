@@ -41,7 +41,7 @@ function Pokemon() {
             <div class="border-circle">
               <div class="inner-circle">
                 <div class="pokeball-button">
-                  <button onClick={handleRandomPokemon}></button>
+                  <button id="btn-poke" onClick={handleRandomPokemon}></button>
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@ function Pokemon() {
           strokeColor="grey"
           strokeWidth="5"
           animationDuration="0.75"
-          width="32"
+          width="64"
           visible={true}
         />
       )}

@@ -4,14 +4,14 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  max-height: 200;
+  max-height: 200vh;
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
-.App {
+.wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +44,7 @@ body::-webkit-scrollbar {
 #vs {
   height: 300px;
   animation: fall 0.25s ease-in-out,
-    shake2 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+    shake2 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) 8;
 }
 
 .pokemon-card p {
@@ -62,7 +62,7 @@ body::-webkit-scrollbar {
 }
 
 .hp-bar {
-  width: 200px;
+  width: 350px;
   text-align: center;
   color: #fff;
   font-weight: 600;
@@ -99,7 +99,7 @@ body::-webkit-scrollbar {
   position: relative;
   width: 128px;
   height: 128px;
-  border: solid 5px black;
+  border: solid 3px black;
   border-radius: 50%;
   padding: 10px;
   margin-top: 2em;
@@ -152,7 +152,7 @@ body::-webkit-scrollbar {
   z-index: 2;
 }
 
-button {
+#btn-poke {
   height: 27.5px;
   width: 27.5px;
   border-radius: 50%;
