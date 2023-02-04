@@ -74,7 +74,7 @@ function Pokemon() {
           strokeColor="grey"
           strokeWidth="5"
           animationDuration="0.75"
-          width="64"
+          width="48"
           visible={true}
         />
       )}
